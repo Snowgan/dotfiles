@@ -7,3 +7,4 @@ setup-bash:
 
 setup-macos:
 	bash "$(shell pwd)/macos/brew-install.sh"
+	bash "$(shell pwd)/macos/brew-cask-install.sh"
