@@ -25,6 +25,6 @@ alias c='clear'
 alias ..='cd ../'
 alias .2='cd ../../'
 alias .3='cd ../../../'
-alias wk='cd ~/Work'
+alias doc='cd ~/Documents'
 
 mcd () { mkdir -p "$1" && cd "$1"; } 
