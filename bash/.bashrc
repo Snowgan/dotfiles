@@ -2,6 +2,13 @@
 export DOTFILES_BASH="$(dirname "$(readlink $HOME/.bashrc)")"
 export DOTFILES="$(dirname "${DOTFILES_BASH}")"
 
+# JAVA
+export JAVA_13_HOME=$(/usr/libexec/java_home -v13)
+alias java13='export JAVA_HOME=$JAVA_13_HOME'
+
+# default to Java 13
+java13
+
 # Mac
 if [ -f "$DOTFILES/macos/bash_macos.sh" ]; then
   source "$DOTFILES/macos/bash_macos.sh"
@@ -26,5 +33,7 @@ alias ..='cd ../'
 alias .2='cd ../../'
 alias .3='cd ../../../'
 alias doc='cd ~/Documents'
+alias ws='cd ~/Work'
+alias wsp='cd ~/Work/02_project'
 
 mcd () { mkdir -p "$1" && cd "$1"; } 
